@@ -1,0 +1,54 @@
+/**
+ * Slide Pattern Styling (BEM Methodology)
+ * Manages slide layout, content constraints, theme overrides, and transition animations.
+ */
+
+/* BEM Element Selectors: Custom hooks for slide body, blockquotes, and quotations */
+.slide__body,
+.slide__quote,
+.slide__quotation {
+	/* Custom typography, colors, or spacing rules */
+}
+
+/* Override theme block spacing for slide quote elements using theme preset variables */
+.slide__quotation {
+	--theme-content-spacing: var(--wp--preset--spacing--30);
+}
+
+/* Reset default margins on right-aligned video blocks within slide figures */
+.single-slide .slide__figure .wp-block-video.alignright {
+	margin: unset;
+}
+
+/* Desktop Layout & Responsive Adjustments (>= 1025px) */
+@media (min-width: 1025px) {
+
+	/* Center the slide article vertically and constrain it to the viewport height */
+	.single-slide article.slide {
+		min-height: calc(100vh - 140px);
+		display: grid;
+		place-items: center;
+		padding: 1rem;
+	}
+
+	/* Prevent embedded slide videos from exceeding available vertical space */
+	.single-slide .slide__figure video {
+		width: auto;
+		max-height: calc(100vh - 240px);
+	}
+
+	/* Adjust theme-specific bottom footer container padding for slide views */
+	.single-slide footer [data-row="bottom"] .ct-container-fluid {
+		padding-block: 0 var(--container-spacing);
+	}
+
+	/* Smooth fade-in transition when navigating between single slide posts */
+	.single-slide {
+		animation: slideFade 0.2s ease-in-out;
+	}
+
+	@keyframes slideFade {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+}
