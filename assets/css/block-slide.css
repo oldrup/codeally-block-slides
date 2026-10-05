@@ -1,54 +1,66 @@
 /**
- * Slide Pattern Styling (BEM Methodology)
- * Manages slide layout, content constraints, theme overrides, and transition animations.
- */
-
-/* BEM Element Selectors: Custom hooks for slide body, blockquotes, and quotations */
-.slide__body,
-.slide__quote,
-.slide__quotation {
-	/* Custom typography, colors, or spacing rules */
+* ========================================
+* SLIDE COMPONENT (BEM)
+* Pattern: Codeally Block Slide Pattern
+* Version: 0.0.4
+* ========================================
+*
+* BLOCK: .slide
+*   Root container for the slide component
+*   Contains figure and body columns
+*
+* ELEMENTS:
+*   .slide__figure  - Left column (image/media container)
+*   .slide__body    - Right column (text/content container)
+*   .slide__media   - Figure wrapper for media
+*   .slide__title   - Main heading (h1)
+*   .slide__copy    - Paragraph text content
+*   .slide__quote   - Quote with citation
+*   .slide__list    - Unordered list within body
+*   .slide__link    - Link wrapper paragraph
+*/
+/* Body text size for single-slide layout */
+.slide__body {
+	font-size: var(--wp--preset--font-size--large);
 }
-
-/* Override theme block spacing for slide quote elements using theme preset variables */
-.slide__quotation {
-	--theme-content-spacing: var(--wp--preset--spacing--30);
-}
-
-/* Reset default margins on right-aligned video blocks within slide figures */
+/**
+* Slide adjustments on all devices front end 
+**/
+/* Remove weird margin to the right of the video */
 .single-slide .slide__figure .wp-block-video.alignright {
 	margin: unset;
 }
-
-/* Desktop Layout & Responsive Adjustments (>= 1025px) */
+/**
+* Slide container, contents and footer adjustments on desktop front
+*/
 @media (min-width: 1025px) {
-
-	/* Center the slide article vertically and constrain it to the viewport height */
-	.single-slide article.slide {
+	/* Center within vertical space minus header and footer */
+	body.single-slide article.slide {
 		min-height: calc(100vh - 140px);
 		display: grid;
 		place-items: center;
 		padding: 1rem;
 	}
-
-	/* Prevent embedded slide videos from exceeding available vertical space */
-	.single-slide .slide__figure video {
+	/* Make sure video's aren't too high to fit the slide */
+	body.single-slide .slide__figure video {
 		width: auto;
 		max-height: calc(100vh - 240px);
 	}
-
-	/* Adjust theme-specific bottom footer container padding for slide views */
+	/* Only apply padding below footer bottom row, not above */
 	.single-slide footer [data-row="bottom"] .ct-container-fluid {
 		padding-block: 0 var(--container-spacing);
 	}
-
-	/* Smooth fade-in transition when navigating between single slide posts */
-	.single-slide {
+	/* Animate the slide in to reduce layout shifts */
+	body.single-slide {
 		animation: slideFade 0.2s ease-in-out;
 	}
-
 	@keyframes slideFade {
-		from { opacity: 0; }
-		to { opacity: 1; }
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 }
+/* End of Slide component */
