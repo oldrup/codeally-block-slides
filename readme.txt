@@ -4,7 +4,7 @@ Tags: slides, presentation, block-editor, accessibility, keyboard-navigation
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 0.1.2
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ This plugin is tested across the latest WordPress releases and a representative 
 2. Activate the plugin through the **Plugins** menu in WordPress.
 
 == Changelog ==
+= 0.2.0 =
+- Bumped the plugin version for the next release and refreshed release metadata.
+
 = 0.1.2 =
 - Replaced superglobal sniffing with core `get_current_screen()` API to eliminate Plugin Check nonce warnings.
 

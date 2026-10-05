@@ -3,7 +3,7 @@
  * Plugin Name:       Codeally Block Slides
  * Plugin URI:        https://github.com/oldrup/codeally-block-slides
  * Description:       Registers a slides post type with deck taxonomy and keyboard navigation for block-based presentations.
- * Version:           0.1.2
+ * Version:           0.2.0
  * Requires at least: 6.9
  * Tested up to:      7.1
  * Requires PHP:      8.2
@@ -169,7 +169,7 @@ add_action( 'enqueue_block_assets', static function (): void {
 		'cdly-slides-style',
 		plugin_dir_url( __FILE__ ) . 'assets/css/block-slide.css',
 		array(),
-		'0.1.2'
+		'0.2.0'
 	);
 } );
 
