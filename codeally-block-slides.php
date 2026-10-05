@@ -12,7 +12,7 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       codeally-block-slides
- * Tags:              slides, presentation, gutenberg, custom-post-type, keyboard-navigation
+ * Tags:              slides, presentation, block-editor, accessibility, keyboard-navigation
  */
 
 declare(strict_types=1);

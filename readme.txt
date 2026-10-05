@@ -1,6 +1,6 @@
 === Codeally Block Slides ===
 Contributors: oldrup
-Tags: slides, presentation, block-editor, custom-post-type, keyboard-navigation
+Tags: slides, presentation, block-editor, accessibility, keyboard-navigation
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.2
@@ -15,12 +15,18 @@ Codeally Block Slides transforms native Gutenberg blocks into full-screen, respo
 
 Developed by [Bjarne Oldrup](https://oldrup.dk/) and sponsored by [Codeally](https://codeally.dk/).
 
+This plugin is tested across the latest WordPress releases and a representative set of themes, including Blocksy, GeneratePress, Kadence, Twenty Twenty-Five, Greyd, and Ollie.
+
 == Frequently Asked Questions ==
 
 === Why should I use Codeally Block Slides? ===
 - **Lightweight & Native:** Eliminates external JavaScript frameworks like Reveal.js by using core WordPress blocks and theme styling.
 - **Deep Linking:** Every slide is an individual post, enabling direct slide links, SEO indexing, and reuse across Query Loops.
 - **Keyboard Navigation:** Native left and right arrow key navigation between single slide posts.
+
+=== Which themes are included in the testing matrix? ===
+- **Classic themes:** Blocksy, GeneratePress, and Kadence
+- **FSE themes:** Twenty Twenty-Five, Greyd, and Ollie
 
 === How do I set up and configure the plugin? ===
 1. Install and activate the plugin.
