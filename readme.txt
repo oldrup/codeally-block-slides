@@ -4,7 +4,7 @@ Tags: slides, presentation, block-editor, accessibility, keyboard-navigation
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 0.3.0
+Stable tag: 0.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,9 @@ Developed by [Bjarne Oldrup](https://oldrup.dk/) and sponsored by [Codeally](htt
 This plugin is tested across the latest WordPress releases and a representative set of themes, including Blocksy, GeneratePress, Kadence, Twenty Twenty-Five, Greyd, and Ollie.
 
 == Frequently Asked Questions ==
+
+=== Does keyboard navigation work with image lightboxes? ===
+Slide navigation pauses while a lightbox is open when it can be detected through standard modal markup or a lightbox-specific marker. This has been specifically tested with [Gallery Block Lightbox](https://en-gb.wordpress.org/plugins/gallery-block-lightbox/), which adds the `baguetteBox-open` class to the body while open.
 
 === Why should I use Codeally Block Slides? ===
 - **Lightweight & Native:** Eliminates external JavaScript frameworks like Reveal.js by using core WordPress blocks and theme styling.
@@ -41,6 +44,10 @@ This plugin is tested across the latest WordPress releases and a representative 
 2. Activate the plugin through the **Plugins** menu in WordPress.
 
 == Changelog ==
+= 0.4.0 =
+- Paused slide arrow-key navigation while detected lightboxes or modal dialogs are open.
+- Tested lightbox detection with Gallery Block Lightbox.
+
 = 0.3.0 =
 - 'Reversed' 'left<next' and 'right>prev' to achieve logical slide order navigation
 
