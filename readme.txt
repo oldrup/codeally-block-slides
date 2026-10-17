@@ -4,7 +4,7 @@ Tags: slides, presentation, block-editor, accessibility, keyboard-navigation
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 0.2.0
+Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,10 @@ This plugin is tested across the latest WordPress releases and a representative 
 == Installation ==
 1. Upload the plugin folder to `/wp-content/plugins/codeally-block-slides`.
 2. Activate the plugin through the **Plugins** menu in WordPress.
+
+== Changelog ==
+= 0.3.0 =
+- 'Reversed' 'left<next' and 'right>prev' to achieve logical slide order navigation
 
 == Changelog ==
 = 0.2.0 =

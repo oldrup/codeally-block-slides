@@ -8,19 +8,16 @@ document.addEventListener("keydown", event => {
     return;
   }
 
-  if (event.key === "ArrowRight") {
-    const next = document.querySelector('a[rel="next"]');
-    if (next) {
+  const goTo = (selector) => {
+    const link = document.querySelector(selector);
+    if (link) {
       event.preventDefault();
-      window.location.href = next.href;
+      link.click();
     }
-  }
+  };
 
-  if (event.key === "ArrowLeft") {
-    const prev = document.querySelector('a[rel="prev"]');
-    if (prev) {
-      event.preventDefault();
-      window.location.href = prev.href;
-    }
-  }
+  // Slide "order" is 'reverse" with 1 being the first slide, 2 being the second etc
+  // Therefore this looks odd: 'Right' key will link to the "previous" slide with higher number
+  if (event.key === "ArrowLeft")  goTo('a[rel="next"]');
+  if (event.key === "ArrowRight") goTo('a[rel="prev"]');
 });

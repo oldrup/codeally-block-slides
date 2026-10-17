@@ -2,7 +2,6 @@
 * ========================================
 * SLIDE COMPONENT (BEM)
 * Pattern: Codeally Block Slide Pattern
-* Version: 0.0.4
 * ========================================
 *
 * BLOCK: .slide
@@ -38,7 +37,7 @@
 	body.single-slide article.slide {
 		min-height: calc(100vh - 140px);
 		display: grid;
-		place-items: center;
+		place-items: center top;
 		padding: 1rem;
 	}
 	/* Make sure video's aren't too high to fit the slide */
